@@ -19,11 +19,18 @@ Cinema.prototype.getFilmByTitle = function(title){
 return filmByTitle;
 };
 
-Cinema.prototype.getFilmsByGenre = function(genre){
-  const filmsByGenre = this.films.filter((film) => {
-    return film.genre === genre;
+// Cinema.prototype.getFilmsByGenre = function(genre){
+//   const filmsByGenre = this.films.filter((film) => {
+//     return film.genre === genre;
+//   })
+//   return filmsByGenre;
+// };
+
+Cinema.prototype.getFilmsByProperty = function(property, value){
+  const filmsByProperty = this.films.filter((film) => {
+    return film[property] === value;
   })
-  return filmsByGenre;
+  return filmsByProperty;
 };
 
 // Cinema.prototype.getFilmsByYear = function(year){
